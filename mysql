@@ -1,0 +1,14 @@
+use world;
+
+select COUNT(Name) from city WHERE CountryCode='USA';
+select Population, LifeExpectancy from country where Code='ARG';
+select Name from country where Name IS NOT NULL ORDER BY LifeExpectancy DESC LIMIT 1;
+select y.Name from city y JOIN country c ON c.Code=y.CountryCode where c.Name='Spain' ORDER BY y.Population DESC LIMIT 1;
+select COUNT(c.Name) from country c JOIN city y ON c.Code = y.CountryCode where c.Region='Southeast Asia';
+select Name from country where Name IS NOT NULL and Population > 9 order by Population ASC Limit 1;
+select COUNT(Name) from country;
+select Region from country order by Population desc LIMIT 10;
+select Name from city where CountryCode='JPN' order by Population DESC limit 5;
+select Name,Code from country where HeadOfState='Elisabeth II';
+select Count(Name) from country;
+select Name, GNP from country order by GNP DESC LIMIT 10;
